@@ -1,6 +1,6 @@
 
 
-// node ScoreCard.js --excel=Worldcup.csv --dataFolder=data --source=https://www.espncricinfo.com/series/icc-cricket-world-cup-2019-1144415/match-results 
+// node Main.js --excel=Worldcup.csv --dataFolder=data --source=https://www.espncricinfo.com/series/icc-cricket-world-cup-2019-1144415/match-results 
 
 let minimist = require("minimist");
 let axios = require("axios");
@@ -11,12 +11,6 @@ let fs = require("fs");
 let path = require("path");
 
 let args = minimist(process.argv);
-
-// download using axios
-// extract information using jsdom
-// manipulate data using array functions
-// save in excel using excel4node
-// create folders and prepare pdfs
 
 let reponseKaPromise = axios.get(args.source);
 reponseKaPromise.then(function (response) {
